@@ -1,50 +1,62 @@
-# FP_Komnum R03 Nomor 20
-# Program Komputasi Numerik - Newton-Raphson Modifikasi
-
-## Kelompok R03 **Ziyad Raziq Lahitidra Afey (5053241042)**
+# RO3_ProgramKomnum_20.py
+## Kelompok R03 *Ziyad Raziq Lahitidra Afey (5053241042)*
 - Nama Anggota:
   - Ledwino Galih Wandanu (5053241017)
   - Farrel Ahmad Lazuardi (5053241035)
   - Handhika Putra Widyartono (5053241039)
-  - **Ziyad Raziq Lahitidra Afey (5053241042)**
+  - *Ziyad Raziq Lahitidra Afey (5053241042)*
   - M. Alfaraldi Raihan (5053241043)
 
-## Deskripsi
-Program ini digunakan untuk mencari akar dari fungsi non-linear menggunakan metode **Newton-Raphson Modifikasi**. Program ditulis dalam bahasa Python menggunakan library `sympy` untuk simbolik matematika. Dilengkapi dengan perhitungan error absolut (Et) dan error relatif (Ea) pada setiap iterasi.
+## 🧮 Newton-Raphson Modifikasi (Python)
 
-# 🔍 Newton-Raphson Modifikasi – Program Komputasi Numerik
+Program ini menyelesaikan akar persamaan nonlinear menggunakan **Metode Newton-Raphson Modifikasi**. Pendekatan ini digunakan untuk mencari akar dari fungsi:
 
-## 📘 Deskripsi Proyek
-Proyek ini adalah implementasi metode **Newton-Raphson Modifikasi** dalam bahasa Python untuk mencari akar dari fungsi non-linear sebagai bagian dari tugas mata kuliah **Komputasi Numerik**.
+> **f(x) = x³ + 6x² – 19x – 84**
 
-### Fungsi yang Diuji:
+---
 
-Diketahui:
-- Titik awal: x₀ = 1
-- Nilai akar sebenarnya: 4
+## 🧠 Metode Newton-Raphson Modifikasi
 
-Program akan melakukan **3 iterasi** untuk mencari akar fungsi menggunakan pendekatan Newton-Raphson Modifikasi, dan menghitung:
-- Et (True Error)
-- Ea (Approximate Error)
+Metode ini merupakan pengembangan dari Newton-Raphson biasa, dengan mempertimbangkan turunan pertama dan kedua dari fungsi, agar iterasi lebih stabil dan cepat konvergen.
 
-## 🧠 Metodologi
+### Rumus yang digunakan:
+xₙ₊₁ = xₙ - [f(xₙ) * f′(xₙ)] / [(f′(xₙ))² - f(xₙ) * f″(xₙ)]
 
-### Rumus Newton-Raphson Modifikasi:
-x_(n+1) = x_n - (f(x_n) * f'(x_n)) / ((f'(x_n))^2 - f(x_n) * f''(x_n))
+---
 
+## 📌 Informasi Input
+- Fungsi: `f(x) = x³ + 6x² – 19x – 84`
+- Turunan pertama: `f'(x) = 3x² + 12x – 19`
+- Turunan kedua: `f''(x) = 6x + 12`
+- Nilai awal (`x₀`): 1
+- Nilai sebenarnya (`x_true`): 4
+- Iterasi: Hingga ke-3
 
-**Keterangan:**
-- `x_n`      → nilai pendekatan saat ini  
-- `x_(n+1)`  → nilai pendekatan berikutnya  
-- `f(x_n)`   → nilai fungsi pada titik x_n  
-- `f'(x_n)`  → turunan pertama fungsi di x_n  
-- `f''(x_n)` → turunan kedua fungsi di x_n  
+---
 
-## 🧪 Teknologi dan Library
+## ✅ Output yang Ditampilkan
 
-- **Python 3.x**
-- Library yang digunakan:
-  - `sympy` → untuk komputasi simbolik (fungsi, turunan)
-  - `numpy` (opsional) → untuk perhitungan numerik
-  - `math` → jika dibutuhkan untuk fungsi matematika dasar
+| Iterasi |   xₙ    |  Et (%)  |  Ea (%)  |
+|--------:|--------:|---------:|---------:|
+|   1     |  2.5300 |  36.75   |   53.23  |
+|   2     |  3.6701 |   8.25   |   30.91  |
+|   3     |  4.0418 |   1.05   |    9.21  |
 
+- **Et (True Error)**: Selisih relatif terhadap nilai sebenarnya.
+- **Ea (Approximate Error)**: Galat relatif antar iterasi (akurasi lokal).
+
+---
+
+## 💡 Contoh Hasil Konsol
+
+Iterasi | x_n | Et (%) | Ea (%)
+1 | 2.5300 | 36.75 | 53.23
+2 | 3.6701 | 8.25 | 30.91
+3 | 4.0418 | 1.05 | 9.21
+
+---
+
+## 🔧 Cara Menjalankan
+Pastikan Python dan `numpy` telah terinstal. Lalu jalankan di terminal:
+```bash
+python RO3_ProgramKomnum_20.py
