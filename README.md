@@ -1,12 +1,12 @@
 # FP_Komnum R03 Nomor 20
 # Program Komputasi Numerik - Newton-Raphson Modifikasi
 
-## Kelompok R03
+## Kelompok R03 **Ziyad Raziq Lahitidra Afey (5053241042)**
 - Nama Anggota:
   - Ledwino Galih Wandanu (5053241017)
   - Farrel Ahmad Lazuardi (5053241035)
   - Handhika Putra Widyartono (5053241039)
-  - Ziyad Raziq Lahitidra Afey (5053241042)
+  - **Ziyad Raziq Lahitidra Afey (5053241042)**
   - M. Alfaraldi Raihan (5053241043)
 
 ## Deskripsi
